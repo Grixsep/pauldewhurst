@@ -1035,17 +1035,18 @@ you added this bit below to align
 }
 
 .contact .info i {
-  font-size: 20px;
-  color: #0563bb;
-  float: left;
-  width: 44px;
-  height: 44px;
-  background: #eef7ff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50px;
-  transition: all 0.3s ease-in-out;
+    font-size: 20px;
+    color: #0563bb;
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: #eef7ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    margin-right: 10px; /* Add some right margin to the icons */
 }
 
 .contact .info h4 {
@@ -1063,10 +1064,11 @@ you added this bit below to align
   color: #728394;
 }
 
-.contact .info .email,
-.contact .info .phone {
-  margin-top: 40px;
-}
+    .contact .info .email,
+    .contact .info .phone {
+        margin-top: 40px;
+        margin-bottom: 30px; /* Add some bottom margin to each info item, adjust as needed */
+    }
 
 .contact .info .email:hover i,
 .contact .info .address:hover i,
