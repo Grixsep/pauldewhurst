@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /user-profile/
+
+# Allow crawling of important sections
+Allow: /images/
+Allow: /assets/
+Allow: /blog/
+Allow: /about-us/
+Allow: /contact-us/
