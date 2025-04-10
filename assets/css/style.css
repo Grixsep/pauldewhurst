@@ -620,14 +620,6 @@ section {
 
 }
 
-.portfolio .portfolio-wrap img {
-  width: 100%;
-  height: auto; /* Keep natural aspect ratio */
-  display: block;
-  transition: opacity 0.5s ease;
-}
-
-
 
 .portfolio .portfolio-wrap::before {
   content: "";
