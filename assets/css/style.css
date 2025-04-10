@@ -617,7 +617,19 @@ section {
   overflow: hidden;
   z-index: 1;
   background: rgba(69, 80, 91, 0.8);
+
+  aspect-ratio: 4 / 3; /* Ensures reserved space before image loads */
+  background-color: #eee; /* Optional: nice fallback */
+
 }
+
+.portfolio .portfolio-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 
 .portfolio .portfolio-wrap::before {
   content: "";
