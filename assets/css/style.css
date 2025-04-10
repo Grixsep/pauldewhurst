@@ -1226,3 +1226,30 @@ you added this bit below to align
 #footer .credits {
   font-size: 13px;
 }
+
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon img {
+  height: 22px;
+  width: auto;
+  transition: filter 0.3s ease;
+}
+
+.social-icon:hover img {
+  filter: brightness(0) saturate(100%) invert(21%) sepia(90%) saturate(2687%) hue-rotate(198deg) brightness(91%) contrast(89%);
+}
+
+.paacs-logo {
+  transform: translateY(-3.5px);
+}
+
+.social-icon.paacs-logo2 img {
+  position: relative;
+  top: -3px; /* moves image content up inside the box */
+  left: 0.5px;
+}
