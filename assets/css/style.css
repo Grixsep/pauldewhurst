@@ -624,13 +624,9 @@ section {
   width: 100%;
   height: auto; /* Keep natural aspect ratio */
   display: block;
-  opacity: 0;
   transition: opacity 0.5s ease;
 }
 
-.portfolio .portfolio-wrap img.lazyloaded {
-  opacity: 1;
-}
 
 
 .portfolio .portfolio-wrap::before {
