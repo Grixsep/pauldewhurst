@@ -356,6 +356,7 @@
                                       data-src="assets/img/portfolio/Recording website best.gif" 
                                       class="img-fluid lazyload" 
                                       alt="PAACS Website Preview"
+                                      width="1348" height="768"
                                     >
                                   <div class="portfolio-info">
                                           <h4>PAACS 1</h4>
@@ -752,25 +753,13 @@
 
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const gifs = document.querySelectorAll("img.lazyload");
-  
-      const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target;
-            const gifSrc = img.getAttribute("data-src");
-            if (gifSrc) {
-              img.src = gifSrc;
-              img.removeAttribute("data-src");
-            }
-            obs.unobserve(img);
-          }
-        });
-      });
-  
-      gifs.forEach(gif => {
-        observer.observe(gif);
+    window.addEventListener("load", () => {
+      document.querySelectorAll("img.lazy-gif").forEach(img => {
+        const gifSrc = img.getAttribute("data-src");
+        if (gifSrc) {
+          img.src = gifSrc;
+          img.removeAttribute("data-src");
+        }
       });
     });
   </script>
