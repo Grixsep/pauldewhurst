@@ -1,6 +1,6 @@
 # Paul Dewhurst Portfolio
 
-[![Live Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge&logo=github)](https://grixsep.github.io/)
+[![Live Site](https://img.shields.io/badge/Site-Live-green?style=for-the-badge&logo=github)](https://grixsep.github.io/pauldewhurst)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](./LICENSE)
 
 This is my personal portfolio website, built using the [MyResume](https://bootstrapmade.com/free-html-bootstrap-template-my-resume/) template by BootstrapMade. It showcases my projects, skills, and contact information.
