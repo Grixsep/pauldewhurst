@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
-      <loc>https://grixsep.github.io/pauldewhurst/index.html</loc>
+      <loc>https://paul.ledewhurst.com/index.html</loc>
       <priority>1.0</priority>
    </url>
    <url>
-      <loc>https://github.com/Grixsep/pauldewhurst/blob/main1/portfolio-details.html</loc>
+      <loc>https://paul.ledewhurst.com/portfolio-details.html</loc>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://paul.ledewhurst.com/portfolio-details2.html</loc>
       <priority>0.5</priority>
    </url>
    <url>
-      <loc>https://github.com/Grixsep/pauldewhurst/blob/main1/portfolio-details2.html</loc>
+      <loc>https://paul.ledewhurst.com/portfolio-details3.html</loc>
       <priority>0.4</priority>
    </url>
    <url>
-      <loc>https://github.com/Grixsep/pauldewhurst/blob/main1/portfolio-details3.html</loc>
+      <loc>https://paul.ledewhurst.com/portfolio-details4.html</loc>
+      <priority>0.4</priority>
+   </url>
+   <url>
+      <loc>https://paul.ledewhurst.com/portfolio-details5.html</loc>
       <priority>0.3</priority>
    </url>
 </urlset>
