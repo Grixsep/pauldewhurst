@@ -1,9 +1,13 @@
 User-agent: *
-Disallow: /user-profile/
 
-# Allow crawling of important sections
+# Allow crawling of static and content folders
 Allow: /images/
 Allow: /assets/
-Allow: /blog/
-Allow: /about-us/
-Allow: /contact-us/
+Allow: /portfolio-details.html
+Allow: /portfolio-details2.html
+Allow: /portfolio-details3.html
+Allow: /portfolio-details4.html
+Allow: /portfolio-details5.html
+
+# Sitemap reference
+Sitemap: https://paul.ledewhurst.com/sitemap.xml
