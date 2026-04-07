@@ -13,11 +13,11 @@ const STRINGS = [
 // 5 slots — currently all pointing to the same image.
 // To swap a slot, just change the filename:  e.g. '/images/hero-bg-2.jpg'
 const HERO_IMAGES = [
-  "/images/hero-bg.jpg",
-  "/images/hero-bg.jpg", // replace with hero-bg-2.jpg when ready
-  "/images/hero-bg.jpg", // replace with hero-bg-3.jpg when ready
-  "/images/hero-bg.jpg", // replace with hero-bg-4.jpg when ready
-  "/images/hero-bg.jpg", // replace with hero-bg-5.jpg when ready
+  { src: "/images/hero-bg.jpg", mobileFocus: "75% center" },
+  { src: "/images/hero-bg.jpg", mobileFocus: "75% center" },
+  { src: "/images/hero-bg.jpg", mobileFocus: "75% center" },
+  { src: "/images/hero-bg.jpg", mobileFocus: "75% center" },
+  { src: "/images/hero-bg.jpg", mobileFocus: "75% center" },
 ];
 
 const CYCLE_MS = 6000; // time per image (ms)
@@ -27,9 +27,18 @@ export default function Hero() {
   const { text: typedText } = useTyped(STRINGS);
 
   const [imgIdx, setImgIdx] = useState(0);
-  const [visible, setVisible] = useState(true); // drives opacity for fade
+  const [visible, setVisible] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
 
   const CYCLE_ENABLED = false; // set true once you have multiple images
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 900px)");
+    setIsMobile(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
 
   useEffect(() => {
     if (!CYCLE_ENABLED) return;
@@ -49,7 +58,10 @@ export default function Hero() {
       <div
         className="hero-bg"
         style={{
-          backgroundImage: `url(${HERO_IMAGES[imgIdx]})`,
+          backgroundImage: `url(${HERO_IMAGES[imgIdx].src})`,
+          backgroundPosition: isMobile
+            ? HERO_IMAGES[imgIdx].mobileFocus
+            : "top center",
           opacity: visible ? 1 : 0,
           transition: `opacity ${FADE_MS}ms ease`,
         }}
