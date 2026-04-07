@@ -236,7 +236,8 @@ h4 {
 }
 
 .hero {
-  min-height: 100vh;
+  min-height: 100vh;       /* fallback */
+  min-height: 100svh;      /* overrides on browsers that support it */
   display: flex;
   align-items: center;
   position: relative;
