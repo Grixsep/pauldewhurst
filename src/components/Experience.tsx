@@ -2,35 +2,48 @@
 
 const JOBS = [
   {
-    company: "Last Energy", role: "Junior Simulation Engineer", period: "2024 – Present", current: true,
+    company: "Last Energy",
+    role: "Simulation Engineer",
+    period: "2024 - Present",
+    current: true,
     bullets: [
-      "Simulation for nuclear microreactor development",
-      "FEA and computational structural & thermal analysis",
-      "Fast-paced startup at the frontier of clean energy",
+      "Leading real-time simulation and digital twin development for SMRs",
+      "Working toward full nuclear power plant simulation capability",
+      "FEA and computational structural and thermal analysis",
+      "Fast-paced startup at the frontier of clean nuclear energy",
     ],
   },
   {
-    company: "PAACS Software", role: "Founder & Software Engineer", period: "Sep 2024 – Present", current: true,
+    company: "CERN",
+    role: "Summer Intern",
+    period: "Jun - Sep 2024",
+    current: false,
     bullets: [
-      "Modular multiphysics tools in C++ with CMake",
-      "Desktop app with ImGui & OpenCASCADE",
-      "Full-stack web platform (Next.js + Supabase)",
+      "FEA in ANSYS for vacuum chamber components",
+      "CATIA design of flexible support structures",
+      "C++ data analysis using the CERN ROOT framework",
     ],
   },
   {
-    company: "CERN", role: "Summer Intern", period: "Jun – Sep 2024", current: false,
+    company: "MacTaggart Scott",
+    role: "Developing Engineer",
+    period: "Jan - Aug 2023",
+    current: false,
     bullets: [
-      "FEA using ANSYS for vacuum chamber components",
-      "CATIA design of flexible supports",
-      "ROOT data analysis workshops in C++",
-    ],
-  },
-  {
-    company: "MacTaggart Scott", role: "Developing Engineer", period: "Jan – Aug 2023", current: false,
-    bullets: [
-      "N&V analysis on naval defence systems",
+      "Noise and vibration analysis on naval defence systems",
       "NDT scanner design for critical components",
-      "Offered additional month beyond placement",
+      "Offered extension beyond the original placement term",
+    ],
+  },
+  {
+    company: "PAACS Software",
+    role: "Personal Project",
+    period: "Sep 2024 - Present",
+    current: false,
+    bullets: [
+      "Modular multiphysics solver toolkit in C++ with CMake",
+      "Desktop app with ImGui and OpenCASCADE",
+      "Web platform built with Next.js and Supabase",
     ],
   },
 ];
@@ -38,12 +51,12 @@ const JOBS = [
 const EDU = [
   {
     degree: "MEng Mechanical Engineering",
-    school: "University of Edinburgh · 2019–2024",
+    school: "University of Edinburgh · 2019 - 2024",
     note: "Fluid dynamics, PDEs, computational methods. Thesis published in Edinburgh Research Archive.",
   },
   {
     degree: "International Exchange",
-    school: "UT Austin · 2021–2022",
+    school: "UT Austin · 2021 - 2022",
     note: "Nominated for exchange year. Awarded the Turing Grant.",
   },
 ];
@@ -53,17 +66,14 @@ export default function Experience() {
     <section id="experience" className="sec sec-alt">
       <div className="sec-inner">
         <div className="sh">
-          <div className="sh-num">02 — Experience</div>
+          <div className="sh-num">02 · Experience</div>
           <h2>Where I&apos;ve Worked</h2>
         </div>
 
-        {/* ── Work ── */}
-        <h3 style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: "0.65rem", textTransform: "uppercase", letterSpacing: "0.12em", color: "var(--text-heading)", marginBottom: "1rem", fontWeight: 600 }}>
-          Work
-        </h3>
+        <h3 className="subsection-label">Work</h3>
         <div className="exp-grid">
           {JOBS.map((job) => (
-            <div className="exp-card" key={job.company}>
+            <div className="exp-card" key={job.company + job.period}>
               <div className="exp-top">
                 <h4>
                   {job.company}
@@ -74,15 +84,17 @@ export default function Experience() {
               <div className="exp-role">{job.role}</div>
               <ul>
                 {job.bullets.map((b, i) => (
-                  <li key={i}><span className="d">—</span>{b}</li>
+                  <li key={i}>
+                    <span className="d">›</span>
+                    {b}
+                  </li>
                 ))}
               </ul>
             </div>
           ))}
         </div>
 
-        {/* ── Education ── */}
-        <h3 style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: "0.65rem", textTransform: "uppercase", letterSpacing: "0.12em", color: "var(--text-heading)", marginBottom: "1rem", marginTop: "2.25rem", fontWeight: 600 }}>
+        <h3 className="subsection-label" style={{ marginTop: "2.25rem" }}>
           Education
         </h3>
         <div className="edu-row">

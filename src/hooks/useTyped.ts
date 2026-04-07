@@ -1,7 +1,12 @@
 "use client";
 import { useState, useEffect, useCallback } from "react";
 
-export function useTyped(strings: string[], typeSpeed = 80, backSpeed = 50, backDelay = 1800) {
+export function useTyped(
+  strings: string[],
+  typeSpeed = 80,
+  backSpeed = 50,
+  backDelay = 1800,
+) {
   const [text, setText] = useState("");
   const [stringIndex, setStringIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -30,5 +35,5 @@ export function useTyped(strings: string[], typeSpeed = 80, backSpeed = 50, back
     return () => clearTimeout(timer);
   }, [tick, isDeleting, backSpeed, typeSpeed]);
 
-  return text;
+  return { text, stringIndex };
 }
