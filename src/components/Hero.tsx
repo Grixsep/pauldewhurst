@@ -33,12 +33,19 @@ export default function Hero() {
   const CYCLE_ENABLED = false; // set true once you have multiple images
 
   useEffect(() => {
-    const mq = window.matchMedia("(max-width: 900px)");
-    setIsMobile(mq.matches);
-    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
-    mq.addEventListener("change", handler);
-    return () => mq.removeEventListener("change", handler);
-  }, []);
+  const mq = window.matchMedia("(max-width: 900px)");
+  setIsMobile(mq.matches);
+  const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+  mq.addEventListener("change", handler);
+
+  // Lock hero height to initial viewport — prevents jump when mobile
+  // browser address bar hides/shows on scroll
+  const hero = document.getElementById("hero");
+  if (hero) hero.style.minHeight = `${window.innerHeight}px`;
+
+  return () => mq.removeEventListener("change", handler);
+}, []);
+
 
   useEffect(() => {
     if (!CYCLE_ENABLED) return;
